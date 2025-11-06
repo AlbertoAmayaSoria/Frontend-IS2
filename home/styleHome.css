@@ -1,0 +1,125 @@
+body {
+  font-family: 'Inter', 'Noto Sans', sans-serif;
+  background-color: #f9fafb;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav{
+    background: #A3B087;
+    /*padding: 20px;*/
+    display: flex;
+
+}
+
+/* Contenedor principal */
+.feature-cards {
+  width: 100%;
+  max-width: 1400px;
+  padding: 120px 64px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Lista de tarjetas */
+.card-list {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: end;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+/* Tarjeta */
+.card {
+  position: relative;
+  width: 362px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.02),
+    0 6px 12px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Imagen */
+.card-image {
+  height: 240px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Cuerpo de tarjeta */
+.card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Título */
+.card-body h5 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+}
+
+/* Descripción */
+.card-body p {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.55);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Enlace "Ver más" */
+.card-body .more {
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.card-body .more:hover {
+  color: #2563eb;
+}
+
+/* Diseño responsivo */
+@media (max-width: 1200px) {
+  .card-list {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-cards {
+    padding: 60px 24px;
+  }
+
+  .card-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
